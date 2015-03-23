@@ -1,6 +1,39 @@
 $(function(){
 	$('#search_button').button();
-	$('#reg_a').click(function(){
-		$('#reg').dialog();
-	})
-})
+
+	$('#reg_a').on('click',function(){
+		$('#reg').dialog({
+			title:'知问注册',
+			buttons:{
+				'提交':function(){
+					alert('hi');
+				},
+				'取消':function(){
+					$(this).dialog('close');
+				}
+			},
+			show:'scale',
+			hide:'puff',
+			autoOpen:'false',
+		});
+	});
+	$('#login_a').on('click',function(){
+		$('#log').dialog({
+			title:'知问登录',
+			buttons:{
+				'确定':function(){
+					alert('hi');
+				},
+				'取消':function(){
+					$(this).dialog('close');
+				}
+			},
+			show:'scale',
+			hide:'puff',
+			autoOpen:'false',
+		});
+	});
+	$('#birth').datepicker();
+	$('#log input[type=radio]').button();
+	$('#log input[type=title]').tooltip();
+});
