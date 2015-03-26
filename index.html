@@ -3,14 +3,12 @@
 	<head>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="Public/Css/jquery-ui.css" />
-		<link rel="stylesheet" type="text/css" href="Public/Css/jquery-ui.structure.css" />
-		<link rel="stylesheet" type="text/css" href="Public/Css/jquery-ui.theme.css" />
-		<link rel="stylesheet" type="text/css" href="Public/Css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="jquery-ui-1.11.4.custom/jquery-ui.theme.css" />
+		<link rel="stylesheet" type="text/css" href="jquery-ui-1.11.4.custom/jquery-ui.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="Public/Css/bootstrap.min.css" /> -->
 		<link rel="stylesheet" type="text/css" href="Public/Css/style.css" />
         <script type="text/javascript" src="Public/Js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="Public/Js/jquery-ui.js"></script>
-        <script type="text/javascript" src="Public/Js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
         <script type="text/javascript" src="Public/Js/index.js"></script>
 	</head>
 	<body>
@@ -31,6 +29,7 @@
 			注册区
 		</div>
 		<div id="log" title="会员登录" style="display:none;">
+		<form action="#" method="get" autocomplete="on">
 		<p>
 			<label for="user">用户名</label>
 			<input  name="user" id="user" title="不少于三个字符"></input>
@@ -38,14 +37,14 @@
 		</p>
 		<p>
 			<label for="pass">密码</label>
-			<input name="pass" id="pass"></input>
+			<input name="pass" id="pass" title="密码字符串不含符号"></input>
 			<span class="star">*</span>
 		</p>
-		<p>
+		
 			<label for="email">email</label>
-			<input  name="email" id="email"></input>
+			<input  name="email" id="email" title="你的email"></input>
 			<span class="star">*</span>
-		</p>
+		
 		<p>
 			<label for="birth">birth</label>
 			<input  name="birth" id="birth" type="disable"></input>
@@ -55,7 +54,7 @@
 			<input type="radio" name="sex" value="male" id="male" ><label for="male">男</label></input>
 			<input type="radio" name="sex" value="female" id="female" ><label for="female">女</label></input>
 		</p>
-		
+		</form>
 
 		</div>
 	</body>
